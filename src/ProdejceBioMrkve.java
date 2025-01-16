@@ -14,9 +14,12 @@ public class ProdejceBioMrkve {
         private String spz;
         // Spotřeba firemního vozidla v litrech na 100 km
         private double spotrebaVozidla;
+        // Jméno prodejce
+        private String jmeno;
 
     // Konstruktor
-    public ProdejceBioMrkve(LocalDate datumNarozeni, int pocetSmluv, double mnozstviMrkve, String mesto, String spz, double spotrebaVozidla) {
+    public ProdejceBioMrkve(String jmeno, LocalDate datumNarozeni, int pocetSmluv, double mnozstviMrkve, String mesto, String spz, double spotrebaVozidla) {
+        this.jmeno = jmeno;
         this.datumNarozeni = datumNarozeni;
         this.pocetSmluv = pocetSmluv;
         this.mnozstviMrkve = mnozstviMrkve;
@@ -26,7 +29,12 @@ public class ProdejceBioMrkve {
     }
 
     // Gettery a settery
-
+    public String getJmeno() {
+        return jmeno;
+    }
+    public void setJmeno(String jmeno) {
+        this.jmeno = jmeno;
+    }
     public LocalDate getDatumNarozeni() {
         return datumNarozeni;
     }
@@ -68,6 +76,7 @@ public class ProdejceBioMrkve {
     @Override
     public String toString() {
         return "ProdejceBiomrkve{" +
+                "jmeno='" + jmeno + '\'' +
                 "datumNarozeni=" + datumNarozeni +
                 ", pocetSmluv=" + pocetSmluv +
                 ", mnozstviMrkve=" + mnozstviMrkve + " tun" +
